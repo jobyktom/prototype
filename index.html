@@ -1,0 +1,284 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Power Bar tool</title>
+
+        <meta name = "viewport" content = "initial-scale = 1, user-scalable = no">
+        <link type="text/css" media="all" href="style.css" rel="stylesheet">
+        <link type="text/css" media="all" href="idangerous.swiper.css" rel="stylesheet">
+
+        <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+        <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+        <script src="js/idangerous.swiper-2.1.min.js"></script>
+        <!--[if IE]><script type="text/javascript" src="js/excanvas.js"></script><![endif]-->
+        <script src="Chart.js"></script>
+        <script src="Easing.js"></script>
+
+        <style>
+
+        </style>
+    </head>
+    <body>
+        <div class="powersection">
+            <input type="text" id="power"/>
+            <button id="btnCalculate">Calculate</button>
+        </div>
+
+
+        <div class="widget">
+            <div id="circle">
+                <canvas id="canvas" height="100" width="100">
+
+                </canvas>
+                <span class="percentage">60%</span>
+            </div>
+            <div id="section_header" >
+                <h2>Great job,Keep going!</h2>
+            </div>
+
+            <div id="accordion">
+                <div class="sperator"></div>
+                <div class="wrapper">
+                    <h3>Content</h3>
+                    <span class="star yellow_star"></span>
+
+                    <div class="clear"></div>
+
+                    <div class="content_box ">
+                        <div class="sperator"></div>
+                        <div class="status">Status</div>
+                        <div class="clear"></div>
+                        <div class="record_desc">Headline & Description</div>
+                        <span class="star green_star"></span>
+                        <div class="record_desc">Contact Information</div>
+                        <span class="star green_star"></span>
+                        <div class="record_desc">Social Media Links</div>
+                        <span class="star green_star"></span>
+                        <div class="record_desc">Pictures</div>
+                        <span class="star yellow_star"></span>
+                        <div class="record_desc">Profile Information</div>
+                        <span class="star yellow_star"></span>
+                        <div class="record_desc">More Information</div>
+                        <span class="star yellow_star"></span>
+                        <div class="record_desc">Extras</div>
+                        <span class="star yellow_star"></span>
+                        <div class="record_desc">Refreshed Recently</div>
+                        <span class="star red_star"></span>
+                    </div>
+                </div>
+                <div class="sperator"></div>
+
+                <div class="wrapper">
+                    <h3>Sharing</h3>
+                    <span class="star red_star"></span>
+
+                    <div class="clear"></div>
+
+                    <div class="content_box ">
+                        <div class="sperator"></div>
+                        <div class="status">Tick when Complete</div>
+                        <div class="clear"></div>
+                        <div class="record_desc">Added to Facebook</div>
+                        <span class="chkStatus"><input type="checkbox" name="vehicle" value="Car"></span>
+                        <div class="record_desc">Added to Twitter</div>
+                        <span class="chkStatus"><input type="checkbox" name="vehicle" value="Car"></span>
+                        <div class="record_desc">Added to Google+</div>
+                        <span class="chkStatus"><input type="checkbox" name="vehicle" value="Car"></span>
+                        <div class="record_desc">Added to Traditional Website</div>
+                        <span class="chkStatus"><input type="checkbox" name="vehicle" value="Car"></span>
+                        <div class="record_desc">Added to directory listing(s)</div>
+                        <span class="chkStatus"><input type="checkbox" name="vehicle" value="Car"></span>
+                    </div>
+                </div>
+                <div class="sperator"></div>
+
+                <div class="wrapper">
+                    <h3>Hints & Tips</h3>
+                    <!--<span class="star"></span>-->
+                    <div class="clear"></div>
+
+                    <div class="content_box ">
+                        <div class="sperator"></div>
+                        <div class="device">
+                            <a class="arrow-left" href="#"></a> 
+                            <a class="arrow-right" href="#"></a>
+                            <div class="swiper-container">
+                                <div class="swiper-wrapper">
+                                    <!--                                    <div class="swiper-slide"> <img src="img/slider1-1.png"> </div>
+                                                                        <div class="swiper-slide"> <img src="img/slider1-2.png"> </div>-->
+                                    <div class="swiper-slide">
+                                        <div class="content-slide">
+                                            <p class="title">Step 11: Twitter</p>
+                                            <p>Add your Telname link (http://yourname.tel) to your Twitter profile to link the two together and bring people to your mobile-ready page.</p>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="content-slide">
+                                            <p class="title">Step 12: Twitter</p>
+                                            <p>Add your Telname link (http://yourname.tel) to your Twitter profile to link the two together and bring people to your mobile-ready page.</p>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="content-slide">
+                                            <p class="title">Step 13: Twitter</p>
+                                            <p>Add your Telname link (http://yourname.tel) to your Twitter profile to link the two together and bring people to your mobile-ready page.</p>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="content-slide">
+                                            <p class="title">Step 14: Twitter</p>
+                                            <p>Add your Telname link (http://yourname.tel) to your Twitter profile to link the two together and bring people to your mobile-ready page.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--                            <div class="pagination"></div>-->
+                        </div>
+
+
+                    </div>
+                </div>
+
+
+            </div>
+
+        </div>
+
+        <script>
+
+            doughnutData = [
+                {
+                    value: 33,
+                    color: "#ff0000"
+                }
+                ,
+                {
+                    value: 33,
+                    color: "#ffc000"
+                },
+                {
+                    value: 34,
+                    color: "#92d050"
+                }
+                ,
+                {
+                    value: 0,
+                    color: "#fff"
+                }
+
+            ];
+
+            window.onload = function() {
+                redraw();
+
+            };
+            function redraw() {
+                var myDoughnut = new Chart(document.getElementById("canvas").getContext("2d")).Doughnut(doughnutData);
+                console.log(doughnutData);
+            }
+
+        </script>
+
+
+        <script>
+//            $(".content_box").click(function() {
+//                $(this).toggle("bounce", {times: 1}, "slow");
+//            });
+//            $("#accordion").accordion();
+
+
+
+            /*jQuery time*/
+            $(document).ready(function() {
+//                $("div.content_box:first").slideDown(1000);
+
+                $("div#accordion div.wrapper h3").click(function() {
+                    //slide up all the link lists
+                    $(this).nextAll("div.content_box:first").slideToggle(200, function() {
+
+                    });
+//                     $(this).slideToggle(1000,function(){
+//                        
+//                    });
+//                    $("div#accordion div.content_box").slideUp();
+                    //slide down the link list below the h3 clicked - only if its closed
+//                    if (!$(this).nextAll("div.content_box:first").is(":visible"))
+//                    {
+//                        $(this).nextAll("div.content_box:first").slideDown(1000)
+//                    }
+                });
+
+                var mySwiper = new Swiper('.swiper-container', {
+//                    pagination: '.pagination',
+                    loop: true,
+                    grabCursor: true,
+                    paginationClickable: true
+                })
+
+                $('.arrow-left').on('click', function(e) {
+                    e.preventDefault()
+                    mySwiper.swipePrev()
+                })
+                $('.arrow-right').on('click', function(e) {
+                    e.preventDefault()
+                    mySwiper.swipeNext()
+                })
+                
+                
+                 
+                $("input#power").keypress(function(event) {
+                    if (event.which == 13) {
+                        $("button#btnCalculate").click();
+                    }
+                });
+                //recalculate
+                $("button#btnCalculate").click(function() {
+                    var red = 0;
+                    var green = 0;
+                    var yellow = 0;
+                    var white = 0;
+                    var power = parseInt($("div.powersection input#power").val());
+
+                    if (power <= 0 || power > 100) {
+                        alert('please Enter a number between 0 -100');
+                        $("div.powersection input#power").val('');
+                        return false;
+                    }
+
+
+                    //value of red
+                    if (power >= 33) {
+                        red = 33;
+                    } else {
+                        red = power;
+                    }
+
+                    //value of yellow
+                    if (power >= 33 && power < 66) {
+                        yellow = power - 33;
+                    } else if (power >= 66) {
+                        yellow = 33;
+                    }
+
+                    //value of green
+                    if (power > 66) {
+                        green = power - 66;
+                    }
+                    //value of white
+                    white = 100 - power;
+
+                    doughnutData[0].value = red;
+                    doughnutData[1].value = yellow;
+                    doughnutData[2].value = green;
+                    doughnutData[3].value = white;
+                    $("div#circle span.percentage").text(power + '%');
+                    redraw();
+                })
+
+
+            })
+
+        </script>
+
+    </body>
+</html>

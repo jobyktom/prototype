@@ -1,0 +1,258 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+
+
+body{
+    color: black;
+    font-family: Calibri,Arial,Verdana,Tahoma,Helvetica,sans-serif;
+    font-size: 16px;
+    margin: 0;
+    padding: 0 0 50px;
+    width: 100%;
+}
+
+
+
+div.widget {
+    background-color: #FFF;
+    border: 4px solid #D9D9D9;
+    border-radius: 10px;
+    margin: 100px 0 10px 200px;
+    position: relative;
+    width: 400px;
+    float: left;
+
+}
+canvas{
+
+
+}
+
+#circle {
+    background: #fff; 
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 5px solid #D9D9D9;
+
+    left: -50px;
+    position: relative;
+    top: -50px;
+    float: left;
+}
+.percentage{
+    color: #FF0000;
+    font-size: 19px;
+    font-weight: bold;
+    left: 34px;
+    position: relative;
+    top: -65px;
+}
+
+.sperator{
+    border-bottom: 1px solid #D9D9D9;
+    width: 100%;
+    clear: both;
+}
+.clear{
+    clear: both;
+}
+
+#section_header{
+    padding: 39px 0 10px;
+    color: #e46c0a;
+    font-size: 19px;
+    font-weight: bold;
+}
+
+div.wrapper h3{
+    font-size: 16px;
+    font-weight: bold;
+    color: #604a7b;
+    float: left;
+    padding: 10px 10px 10px 20px;
+    cursor: pointer;
+
+}
+.headderWrapper{
+
+}
+div.wrapper span.yellow_star{
+    background-position: -4px 0px !important;    
+}
+div.wrapper span.green_star{
+    background-position: -34px 0px !important;    
+}
+div.wrapper span.red_star{
+    background-position: -62px 0px !important;    
+}
+
+
+div.wrapper span.star{
+    float: right;
+    background:url('stars.png') no-repeat;
+    height: 22px;
+    width: 24px;
+    margin:5px;
+
+}
+
+.content_box{
+    display: none;
+    overflow: hidden;
+}
+div.widget div#accordion{
+    top :-25px;
+    position: relative;
+}
+div.content_box p{
+    margin: 0px;
+    /*text-align: justify;*/
+    padding: 20px 10px 10px 20px;
+}
+div#accordion div.wrapper{
+    clear: both;
+}
+div.content_box div.status{
+    float: right;
+    font-size: 14px;
+    padding: 7px;
+    /*width: 35px;*/
+}
+div.content_box div.record_desc{
+    margin: 0px;
+    padding: 10px 0 0 20px;
+    float: left;
+    width: 80%;
+    height: 24px;
+}
+.chkStatus{
+    float: right; 
+    margin-right: 20px;
+    padding-top: 10px;
+}
+
+
+div.content_box div.device{
+    width: 285px;
+    height: 130px;
+    padding: 10px 10px;
+    border-radius: 20px;
+    background: #F8F9F9;
+    border: 3px solid white;
+    margin: 5px auto;
+    position: relative;
+    /*box-shadow: 0px 0px 5px #000;*/
+    /*border: 1px solid;*/
+}
+.device .arrow-left {
+    background: url(img/arrows.png) no-repeat left top;
+    position: absolute;
+    left: -33px;
+    top: 50%;
+    margin-top: -15px;
+    width: 32px;
+    height: 48px;
+}
+.device .arrow-right {
+    background: url(img/arrows.png) no-repeat left bottom;
+    position: absolute;
+    right: -35px;
+    top: 50%;
+    margin-top: -15px;
+    width: 32px;
+    height: 48px;
+}
+.swiper-container {
+    height: 130px;
+    width: 285px;
+}
+.content-slide {
+    padding: 10px;
+    color: #000;
+}
+div.content-slide p{
+    padding: 10px 30px;
+    font-size: 14px;
+    text-align: center;
+    /*padding-top: 10px;*/
+
+}
+.title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center;
+    padding: 10px;
+
+}
+/*.pagination {
+  position: absolute;
+  left: 0;
+  text-align: center;
+  bottom:5px;
+  width: 100%;
+}
+.swiper-pagination-switch {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 10px;
+  background: #999;
+  box-shadow: 0px 1px 2px #555 inset;
+  margin: 0 3px;
+  cursor: pointer;
+}
+.swiper-active-switch {
+  background: #fff;
+}*/
+div.powersection{
+    margin: 30px 0 0 300px
+}
